@@ -1,6 +1,15 @@
 # Jest Watch Toggle Config Plugin
 
-[![Build Status](https://travis-ci.org/jest-community/jest-watch-toggle-config.svg?branch=master)](https://travis-ci.org/jest-community/jest-watch-toggle-config) [![npm version](https://badge.fury.io/js/jest-watch-toggle-config.svg)](https://badge.fury.io/js/jest-watch-toggle-config)
+[![NPM version][npm-image]][npm-url]
+[![NPM downloads][downloads-image]][npm-url]
+
+[![GitHub NodeJS][github-nodejs]][github-action-url]
+[![Codecov][codecov-image]][codecov-url]
+
+[![Visual Studio Code][vscode-image]][vscode-url]
+
+This is a fork fo [jest-watch-toggle-config].
+It seems like the original plugin is no longer maintained.
 
 <div align="center">
   <a href="https://facebook.github.io/jest/">
@@ -17,12 +26,14 @@
 Install `jest`_(it needs Jest 23.4.1+)_ and `jest-watch-toggle-config`
 
 ```bash
-yarn add --dev jest jest-watch-toggle-config
+yarn add --dev jest jest-watch-toggle-config-2
 
 # or with NPM
 
-npm install --save-dev jest jest-watch-toggle-config
+npm install --save-dev jest jest-watch-toggle-config-2
 ```
+
+This plugin is used in [@repobuddy/jest] watch config.
 
 ### Add it to your Jest config
 
@@ -83,3 +94,15 @@ As of Jest 23.4.1, the following boolean options have sane defaults you can leve
 | [`verbose`](https://jestjs.io/docs/en/configuration#verbose-boolean)                 | `v`   | turn %ONOFF% test verbosity           |
 
 _\* Jest already reserves `c`, `o` and `v`…_
+
+[codecov-image]: https://codecov.io/gh/repobuddy/jest-watch-toggle-config/branch/main/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/repobuddy/jest-watch-toggle-config
+[downloads-image]: https://img.shields.io/npm/dm/jest-watch-toggle-config.svg?style=flat
+[github-nodejs]: https://github.com/repobuddy/jest-watch-toggle-config/actions/workflows/release.yml/badge.svg
+[github-action-url]: https://github.com/repobuddy/jest-watch-toggle-config/actions/workflows/release.yml
+[npm-image]: https://img.shields.io/npm/v/jest-watch-toggle-config.svg?style=flat
+[npm-url]: https://npmjs.org/package/jest-watch-toggle-config
+[vscode-image]: https://img.shields.io/badge/vscode-ready-green.svg
+[vscode-url]: https://code.visualstudio.com/
+[jest-watch-toggle-config]: https://github.com/jest-community/jest-watch-toggle-config
+[@repobuddy/jest]: https://github.com/repobuddy/jest
