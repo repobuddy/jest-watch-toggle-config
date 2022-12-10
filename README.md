@@ -1,4 +1,4 @@
-# Jest Watch Toggle Config Plugin
+# jest-watch-toggle-config-2
 
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][npm-url]
@@ -8,13 +8,10 @@
 
 [![Visual Studio Code][vscode-image]][vscode-url]
 
-This is a fork fo [jest-watch-toggle-config].
+This is a fork of [jest-watch-toggle-config].
 It seems like the original plugin is no longer maintained.
 
 <div align="center">
-  <a href="https://facebook.github.io/jest/">
-    <img width="150" height="150" vspace="" hspace="25" src="https://cdn.worldvectorlogo.com/logos/jest.svg">
-  </a>
   <h1>jest-watch-toggle-config</h1>
   <p>Toggle your Jest boolean config settings at will</p>
 </div>
@@ -41,9 +38,9 @@ Since Jest 23.3, you can provide per-instance watch plugin configuration. Jest 2
 
 There are three mandatory configuration items you need to provide:
 
-1.  `setting` is the boolean Jest configuration setting you want to toggle. Boolean settings available for configuration through watch plugins, as of Jest 23.4.1, include [`bail`](https://jestjs.io/docs/en/configuration#bail-boolean), [`collectCoverage`](https://jestjs.io/docs/en/configuration#collectcoverage-boolean), `noSCM`, [`notify`](https://jestjs.io/docs/en/configuration#notify-boolean), `onlyFailures`, [`passWithNoTests`](https://jestjs.io/docs/en/cli#passwithnotests) and [`verbose`](https://jestjs.io/docs/en/configuration#verbose-boolean).
-2.  `key` is the keyboard key that will be bound to this plugin instance, toggling the setting you’re interested in. We actually provide a default key for each option, trying our best not to step on Jest’s built-in keys, but they might conflict with another plugin's key. So you can tweak it.
-3.  `prompt` is the plugin prompt displayed in the watch menu. In this text, you can use the `%ONOFF%` placeholder, that will be dynamically replaced by either `on` or `off`, depending on the resulting setting value. We also provide good defaults for the options listed above, but feel free to tweak them.
+1. `setting` is the boolean Jest configuration setting you want to toggle. Boolean settings available for configuration through watch plugins, as of Jest 23.4.1, include [`bail`](https://jestjs.io/docs/en/configuration#bail-boolean), [`collectCoverage`](https://jestjs.io/docs/en/configuration#collectcoverage-boolean), `noSCM`, [`notify`](https://jestjs.io/docs/en/configuration#notify-boolean), `onlyFailures`, [`passWithNoTests`](https://jestjs.io/docs/en/cli#passwithnotests) and [`verbose`](https://jestjs.io/docs/en/configuration#verbose-boolean).
+2. `key` is the keyboard key that will be bound to this plugin instance, toggling the setting you’re interested in. We actually provide a default key for each option, trying our best not to step on Jest’s built-in keys, but they might conflict with another plugin's key. So you can tweak it.
+3. `prompt` is the plugin prompt displayed in the watch menu. In this text, you can use the `%ONOFF%` placeholder, that will be dynamically replaced by either `on` or `off`, depending on the resulting setting value. We also provide good defaults for the options listed above, but feel free to tweak them.
 
 Here’s an example for toggling both test verbosity (details of passed/failed tests) and code coverage collection with this plugin.
 
@@ -53,8 +50,8 @@ In your `package.json`:
 {
   "jest": {
     "watchPlugins": [
-      ["jest-watch-toggle-config", { "setting": "verbose" }],
-      ["jest-watch-toggle-config", { "setting": "collectCoverage" }]
+      ["jest-watch-toggle-config-2", { "setting": "verbose" }],
+      ["jest-watch-toggle-config-2", { "setting": "collectCoverage" }]
     ]
   }
 }
@@ -66,8 +63,8 @@ Or in `jest.config.js`
 module.exports = {
   // …
   watchPlugins: [
-    ['jest-watch-toggle-config', { setting: 'verbose' }],
-    ['jest-watch-toggle-config', { setting: 'collectCoverage' }],
+    ['jest-watch-toggle-config-2', { setting: 'verbose' }],
+    ['jest-watch-toggle-config-2', { setting: 'collectCoverage' }],
   ],
 }
 ```
@@ -95,14 +92,14 @@ As of Jest 23.4.1, the following boolean options have sane defaults you can leve
 
 _\* Jest already reserves `c`, `o` and `v`…_
 
+[@repobuddy/jest]: https://github.com/repobuddy/jest
 [codecov-image]: https://codecov.io/gh/repobuddy/jest-watch-toggle-config/branch/main/graph/badge.svg
 [codecov-url]: https://codecov.io/gh/repobuddy/jest-watch-toggle-config
-[downloads-image]: https://img.shields.io/npm/dm/jest-watch-toggle-config.svg?style=flat
-[github-nodejs]: https://github.com/repobuddy/jest-watch-toggle-config/actions/workflows/release.yml/badge.svg
+[downloads-image]: https://img.shields.io/npm/dm/jest-watch-toggle-config-2.svg?style=flat
 [github-action-url]: https://github.com/repobuddy/jest-watch-toggle-config/actions/workflows/release.yml
-[npm-image]: https://img.shields.io/npm/v/jest-watch-toggle-config.svg?style=flat
-[npm-url]: https://npmjs.org/package/jest-watch-toggle-config
+[github-nodejs]: https://github.com/repobuddy/jest-watch-toggle-config/actions/workflows/release.yml/badge.svg
+[jest-watch-toggle-config]: https://github.com/jest-community/jest-watch-toggle-config
+[npm-image]: https://img.shields.io/npm/v/jest-watch-toggle-config-2.svg?style=flat
+[npm-url]: https://npmjs.org/package/jest-watch-toggle-config-2
 [vscode-image]: https://img.shields.io/badge/vscode-ready-green.svg
 [vscode-url]: https://code.visualstudio.com/
-[jest-watch-toggle-config]: https://github.com/jest-community/jest-watch-toggle-config
-[@repobuddy/jest]: https://github.com/repobuddy/jest
