@@ -40,7 +40,7 @@
     "@changesets/cli": "^2.25.2",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.0.0",
-    "eslint-config-standard": "^14.1.1",
+    "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
